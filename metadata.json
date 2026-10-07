@@ -1,0 +1,6 @@
+{
+  "name": "Bistro Zagajnik",
+  "description": "Bistro Zagajnik w Radomsku — obiady domowe, rzemieślnicze chleby, oldschoolowe ciasta i dania na wynos w słoikach. Ul. Reymonta 20. Tel: 537 653 002",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

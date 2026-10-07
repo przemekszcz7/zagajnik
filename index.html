@@ -1,0 +1,2366 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bistro Zagajnik – Obiady Domowe, Chleb Rzemieślniczy · Radomsko</title>
+  <meta name="description" content="Bistro Zagajnik w Radomsku — obiady domowe, rzemieślnicze chleby, oldschoolowe ciasta i dania na wynos w słoikach. Ul. Reymonta 20. Tel: 537 653 002" />
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bistro Zagajnik – Obiady Domowe, Chleb Rzemieślniczy · Radomsko" />
+  <meta property="og:description" content="Bistro Zagajnik w Radomsku — obiady domowe, rzemieślnicze chleby, oldschoolowe ciasta i dania na wynos w słoikach. Ul. Reymonta 20. Tel: 537 653 002" />
+  <meta property="og:image" content="https://i.ibb.co/chDVyZS1/646262910-1368675858619839-6926953739782678843-n.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bistro Zagajnik – Obiady Domowe, Chleb Rzemieślniczy · Radomsko" />
+  <meta name="twitter:description" content="Bistro Zagajnik w Radomsku — obiady domowe, rzemieślnicze chleby, oldschoolowe ciasta i dania na wynos w słoikach. Ul. Reymonta 20. Tel: 537 653 002" />
+  <meta name="twitter:image" content="https://i.ibb.co/chDVyZS1/646262910-1368675858619839-6926953739782678843-n.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="https://i.ibb.co/WWLgfDp9/295062660-420312263456208-6887795424288119286-n.jpg" />
+  <link rel="apple-touch-icon" href="https://i.ibb.co/WWLgfDp9/295062660-420312263456208-6887795424288119286-n.jpg" />
+
+  <!-- Preconnect and Preload for instant asset delivery -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://i.ibb.co" crossorigin />
+  <link rel="preload" as="image" href="https://i.ibb.co/chDVyZS1/646262910-1368675858619839-6926953739782678843-n.jpg" fetchpriority="high" />
+
+  <!-- Google Fonts: Cormorant Garamond, Allura, Alex Brush, Jost with display=swap -->
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Allura&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       CSS RESET & MOBILE VIEWPORT RESILIENCE
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      min-width: 0; /* Prevents flex/grid children overflow blowout */
+    }
+
+    :root {
+      --mint-white: #EEFDF6;
+      --surface: #FFFFFF;
+      --forest-green: #31453C;
+      --forest-dark: #20302A;
+      --forest-light: #4A6358;
+      --mint-pale: #F6FEFA;
+      --warm-gold: #C4A05A;
+      --warm-gold-hover: #D4B26E;
+      --text-main: #1E2924;
+      --text-muted: #6A7C74;
+      --text-subtle: #4A5A52;
+      --border-color: #D8E8DE;
+      --border-subtle: rgba(216, 232, 222, 0.7);
+
+      --font-heading: 'Cormorant Garamond', Georgia, serif;
+      --font-script: 'Allura', 'Alex Brush', cursive;
+      --font-body: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--mint-white);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      font-weight: 300;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    body {
+      background-color: var(--mint-white);
+      color: var(--text-main);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      content-visibility: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    }
+
+    /* Lucide Inline SVG Icon Helpers */
+    .lucide-icon {
+      display: inline-block;
+      vertical-align: middle;
+      stroke-width: 1.6;
+      flex-shrink: 0;
+    }
+
+    .lucide-leaf {
+      width: 16px;
+      height: 16px;
+    }
+
+    .orn-icon {
+      width: 18px;
+      height: 18px;
+      stroke: var(--forest-light);
+    }
+
+    .ornament-light .orn-icon {
+      stroke: var(--warm-gold);
+    }
+
+    .chip-icon {
+      width: 15px;
+      height: 15px;
+      margin-right: 6px;
+      vertical-align: -2px;
+      stroke: var(--warm-gold);
+    }
+
+    .star-icon {
+      width: 16px;
+      height: 16px;
+      fill: var(--warm-gold);
+      stroke: none;
+    }
+
+    /* ==========================================================================
+       TYPOGRAPHY ARCHITECTURE — THIN CALLIGRAPHIC MANDATE
+       ========================================================================== */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      font-weight: 300;
+      letter-spacing: 0.015em;
+      text-wrap: balance;
+    }
+
+    .font-script {
+      font-family: var(--font-script);
+      font-weight: 400;
+      letter-spacing: 0.01em;
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--warm-gold);
+      display: block;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    .section-label-left {
+      text-align: left;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4.2vw, 3.2rem);
+      line-height: 1.15;
+      text-align: center;
+      color: var(--forest-green);
+      font-weight: 300;
+    }
+
+    .section-title-left {
+      text-align: left;
+    }
+
+    .section-title-script {
+      font-family: var(--font-script);
+      font-size: clamp(2.5rem, 5.5vw, 4.2rem);
+      line-height: 1.05;
+      color: var(--forest-green);
+      text-align: center;
+      font-weight: 400;
+    }
+
+    /* Ornamental leaf divider motif */
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 10px auto 26px;
+    }
+
+    .ornament-left {
+      justify-content: flex-start;
+      margin-left: 0;
+    }
+
+    .orn-line {
+      flex: 0 0 56px;
+      height: 1px;
+      background: rgba(49, 69, 60, 0.3);
+    }
+
+    .orn-mark {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      background-color: var(--forest-light);
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z'/%3E%3Cpath d='M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12'/%3E%3C/svg%3E") no-repeat center / contain;
+      mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z'/%3E%3Cpath d='M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12'/%3E%3C/svg%3E") no-repeat center / contain;
+      vertical-align: middle;
+      font-size: 0; /* hides emoji text */
+    }
+
+    .ornament-light .orn-line {
+      background: rgba(238, 253, 246, 0.35);
+    }
+
+    .ornament-light .orn-mark {
+      background-color: var(--warm-gold);
+    }
+
+    /* Container & Section Performance */
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+      overflow-x: clip;
+    }
+
+    .section-pad {
+      padding: 88px 0;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: clip;
+    }
+
+    .about-section,
+    .story-section,
+    .menu-section,
+    .hours-section,
+    .reviews-section,
+    .contact-section {
+      content-visibility: auto;
+      contain-intrinsic-size: 1px 750px;
+    }
+
+    /* ==========================================================================
+       1. TOP BAR (SCROLLS AWAY)
+       ========================================================================== */
+    .top-bar {
+      background-color: var(--forest-green);
+      color: var(--mint-white);
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 0.85rem;
+      text-align: center;
+      padding: 9px 16px;
+      letter-spacing: 0.02em;
+      border-bottom: 1px solid rgba(238, 253, 246, 0.1);
+      width: 100%;
+      max-width: 100%;
+      overflow-x: clip;
+    }
+
+    .top-bar a {
+      color: var(--warm-gold);
+      font-weight: 400;
+    }
+
+    .top-bar a:hover {
+      text-decoration: underline;
+    }
+
+    /* ==========================================================================
+       2. STICKY NAVIGATION
+       ========================================================================== */
+    .main-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(238, 253, 246, 0.98);
+      border-bottom: 1px solid var(--border-color);
+      transform: translateZ(0); /* Hardware acceleration without expensive backdrop blur */
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .nav-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+
+    .nav-logo-img {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--border-color);
+    }
+
+    .brand-text-stack {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.05;
+    }
+
+    .brand-sub {
+      font-family: var(--font-body);
+      font-weight: 300;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+    }
+
+    .brand-name {
+      font-family: var(--font-script);
+      font-size: 1.85rem;
+      color: var(--forest-green);
+      font-weight: 400;
+      margin-top: -2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      position: relative;
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 0.92rem;
+      color: var(--forest-green);
+      padding: 4px 0;
+      white-space: nowrap;
+    }
+
+    /* Hand-stitched underline on nav links */
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 1px;
+      border-bottom: 1px dashed var(--warm-gold);
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta-btn {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-weight: 400;
+      font-size: 1rem;
+      color: var(--forest-green);
+      padding: 7px 20px;
+      border-radius: 9999px;
+      border: 1px solid var(--forest-green);
+      background: transparent;
+      white-space: nowrap;
+      transition: all 0.25s ease;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-cta-btn:hover {
+      background-color: var(--forest-green);
+      color: var(--mint-white);
+    }
+
+    /* CSS-Only Hamburger Checkbox Hack */
+    .nav-toggle-input {
+      display: none;
+    }
+
+    .nav-hamburger-label {
+      display: none;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 28px;
+      height: 18px;
+      cursor: pointer;
+      z-index: 1010;
+    }
+
+    .nav-hamburger-label span {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: var(--forest-green);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    /* ==========================================================================
+       3. HERO SECTION (MIN-HEIGHT 100VH)
+       ========================================================================== */
+    .hero-section {
+      min-height: calc(100vh - 40px);
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      background: url('https://i.ibb.co/chDVyZS1/646262910-1368675858619839-6926953739782678843-n.jpg') center center / cover no-repeat;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(32, 48, 42, 0.35) 0%,
+        rgba(32, 48, 42, 0.62) 55%,
+        rgba(32, 48, 42, 0.92) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding: 0 max(24px, 6vw) max(80px, 10vh);
+      color: var(--mint-white);
+    }
+
+    .hero-tagline-top {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--warm-gold);
+      margin-bottom: 8px;
+    }
+
+    .hero-wordmark-pre {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.45rem;
+      color: rgba(238, 253, 246, 0.85);
+      margin-bottom: -6px;
+      letter-spacing: 0.04em;
+    }
+
+    .hero-title {
+      font-family: var(--font-script);
+      font-weight: 400;
+      font-size: clamp(3.5rem, 9vw, 7rem);
+      line-height: 0.95;
+      color: var(--mint-white);
+      margin-bottom: 16px;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.15rem, 2vw, 1.4rem);
+      line-height: 1.5;
+      color: rgba(238, 253, 246, 0.88);
+      max-width: 540px;
+      margin-bottom: 24px;
+    }
+
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+
+    .hero-chip {
+      font-family: var(--font-body);
+      font-size: 0.84rem;
+      font-weight: 300;
+      color: var(--mint-white);
+      border: 1px solid rgba(238, 253, 246, 0.4);
+      background: transparent;
+      padding: 6px 16px;
+      border-radius: 9999px;
+      letter-spacing: 0.02em;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-hero-primary {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-weight: 400;
+      font-size: 1.15rem;
+      letter-spacing: 0.03em;
+      padding: 12px 32px;
+      border-radius: 9999px;
+      border: 1px solid var(--mint-white);
+      color: var(--mint-white);
+      background: transparent;
+      transition: all 0.25s ease;
+    }
+
+    .btn-hero-primary:hover {
+      background-color: var(--mint-white);
+      color: var(--forest-green);
+    }
+
+    .btn-hero-tel {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 0.95rem;
+      color: var(--mint-white);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 20px;
+      transition: color 0.25s ease;
+    }
+
+    .btn-hero-tel:hover {
+      color: var(--warm-gold);
+    }
+
+    /* ==========================================================================
+       4. O NAS SECTION
+       ========================================================================== */
+    .about-section {
+      background-color: var(--surface);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .about-copy {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      font-weight: 300;
+      color: var(--text-subtle);
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .feature-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: var(--font-body);
+      font-size: 0.98rem;
+      font-weight: 400;
+      color: var(--forest-green);
+    }
+
+    .feature-bullet {
+      color: var(--forest-light);
+      font-size: 0.85rem;
+      flex-shrink: 0;
+    }
+
+    .about-contact-card {
+      background-color: var(--forest-green);
+      border: 1px solid rgba(196, 160, 90, 0.45);
+      border-radius: 12px;
+      padding: 40px 36px;
+      color: var(--mint-white);
+      box-shadow: 0 12px 32px rgba(32, 48, 42, 0.08);
+    }
+
+    .card-kicker {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--warm-gold);
+      margin-bottom: 16px;
+    }
+
+    .card-phone-link {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 3.5vw, 2.6rem);
+      font-weight: 300;
+      color: var(--mint-white);
+      line-height: 1.1;
+      margin-bottom: 14px;
+      letter-spacing: 0.02em;
+    }
+
+    .card-phone-link:hover {
+      color: var(--warm-gold);
+    }
+
+    .card-meta-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-family: var(--font-body);
+      font-size: 0.92rem;
+      font-weight: 300;
+      color: rgba(238, 253, 246, 0.88);
+      margin-bottom: 24px;
+    }
+
+    .card-meta-list a:hover {
+      color: var(--warm-gold);
+    }
+
+    .card-action-btn {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--forest-green);
+      background-color: var(--mint-white);
+      border: 1px solid var(--warm-gold);
+      padding: 12px 24px;
+      border-radius: 9999px;
+      transition: all 0.25s ease;
+    }
+
+    .card-action-btn:hover {
+      background-color: var(--warm-gold);
+      color: #FFFFFF;
+    }
+
+    /* ==========================================================================
+       5. CHLEB — MAŁA BAJKA Z ULICY REYMONTA
+       ========================================================================== */
+    .story-section {
+      background-color: var(--mint-pale);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: center;
+      margin-top: 16px;
+    }
+
+    .story-body {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.15rem, 1.4vw, 1.28rem);
+      line-height: 1.85;
+      color: var(--forest-green);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .story-closing {
+      font-family: var(--font-script);
+      font-size: clamp(2rem, 3.2vw, 2.7rem);
+      color: var(--forest-light);
+      text-align: center;
+      margin-top: 36px;
+      font-weight: 400;
+    }
+
+    .story-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .story-img-card {
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--surface);
+      box-shadow: 0 8px 24px rgba(49, 69, 60, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .story-img-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(49, 69, 60, 0.08);
+    }
+
+    .story-img-card img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+    }
+
+    .story-img-caption {
+      padding: 10px 14px;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 400;
+      color: var(--text-muted);
+      text-align: center;
+      letter-spacing: 0.04em;
+      border-top: 1px dashed var(--border-color);
+    }
+
+    /* ==========================================================================
+       6. MENU SECTION
+       ========================================================================== */
+    .menu-section {
+      background-color: var(--mint-white);
+    }
+
+    /* Category quick-nav: pure CSS smooth scroll pills */
+    .menu-nav-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin: 10px auto 48px;
+      max-width: 900px;
+    }
+
+    .menu-nav-pill {
+      font-family: var(--font-body);
+      font-size: 0.84rem;
+      font-weight: 400;
+      color: var(--forest-green);
+      background-color: var(--surface);
+      border: 1px solid var(--border-color);
+      padding: 7px 16px;
+      border-radius: 9999px;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .menu-nav-pill:hover {
+      background-color: var(--forest-green);
+      color: var(--mint-white);
+      border-color: var(--forest-green);
+    }
+
+    .menu-categories-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .menu-card {
+      background-color: var(--surface);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 36px 40px;
+      box-shadow: 0 4px 18px rgba(49, 69, 60, 0.04);
+      scroll-margin-top: 96px;
+    }
+
+    .menu-card-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .menu-category-title {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.8rem, 3.2vw, 2.3rem);
+      color: var(--forest-green);
+      letter-spacing: 0.02em;
+    }
+
+    .menu-items-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu-item-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 20px;
+      padding: 15px 0;
+      border-bottom: 1px dashed var(--border-color);
+    }
+
+    .menu-item-row:last-child {
+      border-bottom: none;
+    }
+
+    .menu-item-info {
+      flex: 1;
+    }
+
+    .menu-item-name {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.98rem;
+      color: var(--text-main);
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .menu-item-desc {
+      font-family: var(--font-body);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+      display: block;
+    }
+
+    .menu-item-price {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: 0.98rem;
+      color: var(--forest-green);
+      white-space: nowrap;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      flex-shrink: 0;
+    }
+
+    /* Sub-list styling for teas or specials */
+    .menu-sub-details {
+      display: block;
+      margin-top: 4px;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       7. GODZINY SECTION
+       ========================================================================== */
+    .hours-section {
+      background-color: var(--forest-green);
+      color: var(--mint-white);
+    }
+
+    .hours-section .section-title-script {
+      color: var(--mint-white);
+    }
+
+    .hours-card {
+      max-width: 720px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(216, 232, 222, 0.22);
+      border-radius: 12px;
+      padding: 36px 40px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+    }
+
+    .hours-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 24px;
+    }
+
+    .hours-table tr {
+      border-bottom: 1px dashed rgba(216, 232, 222, 0.15);
+    }
+
+    .hours-table tr:last-child {
+      border-bottom: none;
+    }
+
+    .hours-table td {
+      padding: 13px 6px;
+      font-family: var(--font-body);
+      font-size: 0.98rem;
+    }
+
+    .hours-day {
+      font-weight: 300;
+      color: rgba(238, 253, 246, 0.92);
+      text-align: left;
+    }
+
+    .hours-time {
+      font-weight: 500;
+      color: var(--warm-gold);
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+
+    .hours-notice {
+      text-align: center;
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.15rem;
+      color: rgba(238, 253, 246, 0.85);
+      border-top: 1px solid rgba(216, 232, 222, 0.15);
+      padding-top: 20px;
+      letter-spacing: 0.02em;
+    }
+
+    /* ==========================================================================
+       8. OPINIE SECTION
+       ========================================================================== */
+    .reviews-section {
+      background-color: var(--surface);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: 40px;
+    }
+
+    .review-card {
+      background-color: var(--mint-pale);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow: 0 4px 16px rgba(49, 69, 60, 0.03);
+    }
+
+    .review-quote-mark {
+      font-family: var(--font-heading);
+      font-size: 4rem;
+      line-height: 1;
+      color: rgba(216, 232, 222, 0.85);
+      margin-bottom: -16px;
+      font-weight: 300;
+    }
+
+    .review-stars {
+      color: var(--warm-gold);
+      font-size: 0.95rem;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    .review-text {
+      font-family: var(--font-heading);
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--forest-green);
+      flex: 1;
+      margin-bottom: 18px;
+    }
+
+    .review-author {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      border-top: 1px dashed var(--border-color);
+      padding-top: 12px;
+    }
+
+    .reviews-footer-cta {
+      text-align: center;
+    }
+
+    .btn-reviews-fb {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-body);
+      font-size: 0.94rem;
+      font-weight: 400;
+      color: var(--forest-green);
+      border: 1px solid var(--forest-green);
+      padding: 10px 26px;
+      border-radius: 9999px;
+      transition: all 0.25s ease;
+    }
+
+    .btn-reviews-fb:hover {
+      background-color: var(--forest-green);
+      color: var(--mint-white);
+    }
+
+    /* ==========================================================================
+       9. KONTAKT & LOKALIZACJA SECTION
+       ========================================================================== */
+    .contact-section {
+      background-color: var(--mint-pale);
+      border-top: 1px solid var(--border-color);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .contact-details-box {
+      background-color: var(--surface);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 36px 32px;
+      box-shadow: 0 4px 20px rgba(49, 69, 60, 0.04);
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px dashed var(--border-color);
+    }
+
+    .contact-row:last-of-type {
+      border-bottom: none;
+    }
+
+    .contact-icon {
+      font-size: 1.2rem;
+      line-height: 1;
+      margin-top: 3px;
+      color: var(--forest-light);
+    }
+
+    .contact-info-title {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 2px;
+    }
+
+    .contact-info-val {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--forest-green);
+    }
+
+    .contact-info-val.phone-val {
+      font-family: var(--font-heading);
+      font-size: 1.55rem;
+      font-weight: 300;
+      letter-spacing: 0.03em;
+    }
+
+    .contact-cta-wrapper {
+      margin-top: 24px;
+    }
+
+    .contact-btn-tel {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: var(--forest-green);
+      border: 1px solid var(--forest-green);
+      background-color: transparent;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      letter-spacing: 0.02em;
+      transition: all 0.25s ease;
+    }
+
+    .contact-btn-tel:hover {
+      background-color: var(--forest-green);
+      color: var(--mint-white);
+    }
+
+    .map-frame-wrapper {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 8px 24px rgba(49, 69, 60, 0.06);
+      background-color: var(--surface);
+    }
+
+    .map-frame-wrapper iframe {
+      display: block;
+      width: 100%;
+      height: 420px;
+      border: 0;
+    }
+
+    /* ==========================================================================
+       10. FOOTER
+       ========================================================================== */
+    .main-footer {
+      background-color: var(--forest-dark);
+      border-top: 1px solid rgba(196, 160, 90, 0.35);
+      color: rgba(238, 253, 246, 0.85);
+      padding: 64px 0 36px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .footer-logo-img {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid rgba(238, 253, 246, 0.3);
+      margin-bottom: 12px;
+    }
+
+    .footer-brand-sub {
+      font-family: var(--font-body);
+      font-size: 0.74rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: rgba(238, 253, 246, 0.65);
+    }
+
+    .footer-brand-name {
+      font-family: var(--font-script);
+      font-size: 2.8rem;
+      color: var(--mint-white);
+      font-weight: 400;
+      margin-top: -6px;
+      margin-bottom: 16px;
+    }
+
+    .footer-links-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 24px;
+      font-family: var(--font-body);
+      font-size: 0.88rem;
+      font-weight: 300;
+    }
+
+    .footer-links-row a {
+      color: rgba(238, 253, 246, 0.8);
+    }
+
+    .footer-links-row a:hover {
+      color: var(--warm-gold);
+    }
+
+    .footer-meta-row {
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: rgba(238, 253, 246, 0.65);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .footer-copyright {
+      font-family: var(--font-body);
+      font-size: 0.76rem;
+      font-weight: 300;
+      color: rgba(238, 253, 246, 0.45);
+      border-top: 1px solid rgba(238, 253, 246, 0.1);
+      padding-top: 24px;
+      width: 100%;
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================================== */
+    @media (max-width: 960px) {
+      .about-grid,
+      .story-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .reviews-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .story-images {
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .nav-hamburger-label {
+        display: flex;
+      }
+
+      .nav-links-wrapper {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: rgba(238, 253, 246, 0.98);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--border-color);
+        display: flex;
+        flex-direction: column;
+        padding: 24px 32px 32px;
+        gap: 20px;
+        box-shadow: 0 16px 36px rgba(49, 69, 60, 0.12);
+        transform: translateY(-130%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.35s ease, opacity 0.3s ease;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        width: 100%;
+      }
+
+      .nav-links a {
+        font-size: 1.05rem;
+        display: block;
+        width: 100%;
+      }
+
+      .nav-cta-btn {
+        text-align: center;
+        width: 100%;
+        margin-top: 8px;
+      }
+
+      /* Hamburger toggled state */
+      .nav-toggle-input:checked ~ .nav-links-wrapper {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .nav-toggle-input:checked ~ .nav-hamburger-label span:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg);
+      }
+
+      .nav-toggle-input:checked ~ .nav-hamburger-label span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .nav-toggle-input:checked ~ .nav-hamburger-label span:nth-child(3) {
+        transform: translateY(-8.5px) rotate(-45deg);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .section-pad {
+        padding: 64px 0;
+      }
+
+      .menu-card {
+        padding: 24px 20px;
+      }
+
+      .about-contact-card,
+      .contact-details-box,
+      .hours-card {
+        padding: 28px 20px;
+      }
+
+      .story-images {
+        grid-template-columns: 1fr;
+      }
+
+      .story-img-card img {
+        height: 240px;
+      }
+
+      .menu-item-row {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .menu-item-price {
+        text-align: left;
+      }
+
+      .top-bar {
+        font-size: 0.78rem;
+        padding: 8px 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       1. TOP BAR (SCROLLS AWAY)
+       ======================================================================== -->
+  <aside class="top-bar" aria-label="Ważne informacje">
+    <svg class="lucide-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:4px;"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg> Obiady domowe · Chleby rzemieślnicze · Dania na wynos w słoikach · <svg class="lucide-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:2px; vertical-align:-1px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> <a href="tel:537653002">537 653 002</a>
+  </aside>
+
+  <!-- ========================================================================
+       2. STICKY NAVIGATION
+       ======================================================================== -->
+  <header class="main-header">
+    <div class="nav-container">
+      
+      <!-- Brand lockup -->
+      <a href="#" class="nav-brand" aria-label="Bistro Zagajnik - Strona główna">
+        <img 
+          src="https://i.ibb.co/WWLgfDp9/295062660-420312263456208-6887795424288119286-n.jpg" 
+          alt="Bistro Zagajnik Favicon Logo" 
+          class="nav-logo-img" 
+          width="36" 
+          height="36" 
+          loading="eager"
+          decoding="async"
+          referrerpolicy="no-referrer"
+        />
+        <div class="brand-text-stack">
+          <span class="brand-sub">Bistro</span>
+          <span class="brand-name">Zagajnik</span>
+        </div>
+      </a>
+
+      <!-- Pure CSS Hamburger Checkbox Hack -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Przełącz menu nawigacyjne" />
+      <label for="nav-toggle" class="nav-hamburger-label" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <!-- Nav Links & Action -->
+      <div class="nav-links-wrapper">
+        <nav aria-label="Nawigacja główna">
+          <ul class="nav-links">
+            <li><a href="#o-nas">O Nas</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#chleb">Chleb</a></li>
+            <li><a href="#godziny">Godziny</a></li>
+            <li><a href="#opinie">Opinie</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+          </ul>
+        </nav>
+        <a href="#kontakt" class="nav-cta-btn">Zarezerwuj stolik</a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================================
+         3. HERO SECTION
+         ======================================================================== -->
+    <section class="hero-section" id="hero" aria-label="Powitanie w Bistro Zagajnik">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      
+      <div class="hero-content">
+        <p class="hero-tagline-top">Radomsko · ul. Władysława Reymonta 20</p>
+        
+        <div class="ornament ornament-left ornament-light">
+          <span class="orn-line"></span>
+          <span class="orn-mark"></span>
+          <span class="orn-line"></span>
+        </div>
+
+        <p class="hero-wordmark-pre">Bistro</p>
+        <h1 class="hero-title">Zagajnik</h1>
+        
+        <p class="hero-subtitle">
+          Obiady domowe, oldschoolowe ciasta, rzemieślnicze chleby, dania na wynos w słoikach. <svg class="lucide-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--warm-gold); vertical-align:-2px;"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+        </p>
+
+        <div class="hero-chips" role="list">
+          <span class="hero-chip" role="listitem">
+            <svg class="lucide-icon chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2v6a3 3 0 0 1-3 3 3 3 0 0 1-3-3V2"/><path d="M15 2v19"/><path d="M5 2v19"/><path d="M5 8h4a2 2 0 0 0 2-2V2H3v4a2 2 0 0 0 2 2Z"/></svg>Obiady domowe
+          </span>
+          <span class="hero-chip" role="listitem">
+            <svg class="lucide-icon chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2 22 10-10"/><path d="m16 8-1.5-1.5a3.54 3.54 0 0 0-5 0l-.5.5 6 6 .5-.5a3.54 3.54 0 0 0 0-5Z"/><path d="m18 10 1.5-1.5a3.54 3.54 0 0 0 0-5l-.5-.5-6 6 .5.5a3.54 3.54 0 0 0 5 0Z"/><path d="m10 14-1.5-1.5a3.54 3.54 0 0 0-5 0l-.5.5 6 6 .5-.5a3.54 3.54 0 0 0 0-5Z"/><path d="m12 16 1.5-1.5a3.54 3.54 0 0 0 0-5l-.5-.5-6 6 .5.5a3.54 3.54 0 0 0 5 0Z"/></svg>Chleby rzemieślnicze
+          </span>
+          <span class="hero-chip" role="listitem">
+            <svg class="lucide-icon chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10"/><path d="M6 6h12"/><path d="M5 10a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v9a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-9Z"/><path d="M9 12h6"/></svg>Dania w słoikach
+          </span>
+          <span class="hero-chip" role="listitem">
+            <svg class="lucide-icon chip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 2v4"/><path d="M20 7v3.5a2.5 2.5 0 0 1-5 0V7"/><path d="M7.2 7.9 3 11v9c0 .6.4 1 1 1h16c.6 0 1-.4 1-1v-9c0-2-3-4-7-4-3 0-5.3 1.2-6.8 1.9Z"/><path d="M16 21v-4a4 4 0 0 0-8 0v4"/></svg>Ciasta oldschool
+          </span>
+        </div>
+
+        <div class="hero-cta-group">
+          <a href="#menu" class="btn-hero-primary">Zobacz menu</a>
+          <a href="tel:537653002" class="btn-hero-tel">
+            <svg class="lucide-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Zadzwoń: 537 653 002
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         4. O NAS SECTION
+         ======================================================================== -->
+    <section class="section-pad about-section" id="o-nas" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          
+          <!-- Left Column: Story & Features -->
+          <div>
+            <span class="section-label section-label-left">NASZA FILOZOFIA</span>
+            <h2 id="about-title" class="section-title section-title-left">Smak domu, prosto z serca.</h2>
+            
+            <div class="ornament ornament-left">
+              <span class="orn-line"></span>
+              <span class="orn-mark"></span>
+              <span class="orn-line"></span>
+            </div>
+
+            <p class="about-copy">
+              Bistro Zagajnik to miejsce, w którym serwujemy domowe obiady, rzemieślnicze pieczywo, klasyczne ciasta i dania gotowe do zabrania w słoikach — wszystko przygotowywane z troską, jak u babci w kuchni.
+            </p>
+
+            <ul class="feature-list">
+              <li class="feature-item">
+                <svg class="lucide-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--forest-light);"><path d="M18 2v6a3 3 0 0 1-3 3 3 3 0 0 1-3-3V2"/><path d="M15 2v19"/><path d="M5 2v19"/><path d="M5 8h4a2 2 0 0 0 2-2V2H3v4a2 2 0 0 0 2 2Z"/></svg>
+                <span>Domowe obiady codziennie</span>
+              </li>
+              <li class="feature-item">
+                <svg class="lucide-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--forest-light);"><path d="m2 22 10-10"/><path d="m16 8-1.5-1.5a3.54 3.54 0 0 0-5 0l-.5.5 6 6 .5-.5a3.54 3.54 0 0 0 0-5Z"/><path d="m18 10 1.5-1.5a3.54 3.54 0 0 0 0-5l-.5-.5-6 6 .5.5a3.54 3.54 0 0 0 5 0Z"/><path d="m10 14-1.5-1.5a3.54 3.54 0 0 0-5 0l-.5.5 6 6 .5-.5a3.54 3.54 0 0 0 0-5Z"/><path d="m12 16 1.5-1.5a3.54 3.54 0 0 0 0-5l-.5-.5-6 6 .5.5a3.54 3.54 0 0 0 5 0Z"/></svg>
+                <span>Rzemieślniczy chleb na zakwasie</span>
+              </li>
+              <li class="feature-item">
+                <svg class="lucide-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--forest-light);"><path d="M7 3h10"/><path d="M6 6h12"/><path d="M5 10a4 4 0 0 1 4-4h6a4 4 0 0 1 4 4v9a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3v-9Z"/><path d="M9 12h6"/></svg>
+                <span>Dania na wynos w słoikach</span>
+              </li>
+              <li class="feature-item">
+                <svg class="lucide-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--forest-light);"><path d="M16 2v4"/><path d="M20 7v3.5a2.5 2.5 0 0 1-5 0V7"/><path d="M7.2 7.9 3 11v9c0 .6.4 1 1 1h16c.6 0 1-.4 1-1v-9c0-2-3-4-7-4-3 0-5.3 1.2-6.8 1.9Z"/><path d="M16 21v-4a4 4 0 0 0-8 0v4"/></svg>
+                <span>Oldschoolowe ciasta</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right Column: Forest Green Card -->
+          <aside class="about-contact-card" aria-label="Szybki kontakt z bistro">
+            <h3 class="card-kicker">KONTAKT</h3>
+            <a href="tel:537653002" class="card-phone-link" aria-label="Zadzwoń do nas pod numer 537 653 002">
+              537 653 002
+            </a>
+            
+            <div class="card-meta-list">
+              <p>
+                <svg class="lucide-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--warm-gold); margin-right:6px;"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                ul. Władysława Reymonta 20, 97-500 Radomsko
+              </p>
+              <p>
+                <svg class="lucide-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--warm-gold); margin-right:6px;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <a href="mailto:manager.restauracjalas@gmail.com">manager.restauracjalas@gmail.com</a>
+              </p>
+              <p>
+                <svg class="lucide-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--warm-gold); margin-right:6px;"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                <a href="https://www.facebook.com/ZagajnikRadomsko" target="_blank" rel="noopener noreferrer">facebook.com/ZagajnikRadomsko</a>
+              </p>
+            </div>
+
+            <a href="#kontakt" class="card-action-btn">Odwiedź nas lub zamów</a>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         5. CHLEB — "MAŁA BAJKA Z ULICY REYMONTA" SECTION
+         ======================================================================== -->
+    <section class="section-pad story-section" id="chleb" aria-labelledby="story-title">
+      <div class="container">
+        
+        <span class="section-label">NASZA HISTORIA</span>
+        <div class="ornament">
+          <span class="orn-line"></span>
+          <span class="orn-mark"></span>
+          <span class="orn-line"></span>
+        </div>
+        
+        <h2 id="story-title" class="section-title-script">Mała bajka z ulicy Reymonta</h2>
+
+        <div class="story-grid">
+          
+          <!-- Story copy rewritten cohesively in thin Cormorant Garamond 300 italic -->
+          <div class="story-body">
+            <p>
+              Dawno, dawno temu, gdy zza rogu wyskoczył na nas niespodziewanie covid i sparaliżował funkcjonowanie na całej linii, pojawiła się niepewność o jutro i utrata poczucia bezpieczeństwa. A gdzie szukać bezpieczeństwa? W przytulaniu — ale skoro prowadzisz gastronomię, przytulać się z gośćmi nie wypada. Można ich jednak nakarmić chlebem.
+            </p>
+            <p>
+              Takim z mąki, zakwasu, wody, soli i ziaren — bez skrótów, ścieżką wyboistą i złośliwą. Szczerze i od serca, po kilkanaście bochenków dziennie.
+            </p>
+            <p>
+              I od tamtej pory mamy nasz KLASYK — chleb, który uwielbia flirtować z masłem i majonezem w dziurkach, a chrupać na powierzchni. Cudownie smakuje z tatarem, a latem komponuje się doskonale z malinowymi pomidorami i solą maldon.
+            </p>
+            <p>
+              Jego codzienny nakład wyczerpuje się najszybciej — jest też najczęściej »zaklepywany«. Idealny także na pierwsze szkolenie z glutenu dla bobasa.
+            </p>
+          </div>
+
+          <!-- Bread photos -->
+          <div class="story-images">
+            <figure class="story-img-card">
+              <img 
+                src="https://i.ibb.co/bRHkkbZq/641677250-1363403795813712-8866871747183839593-n.jpg" 
+                alt="Rzemieślniczy chleb na zakwasie z chrupiącą skórką w Bistro Zagajnik" 
+                width="400" 
+                height="290" 
+                loading="lazy" 
+                decoding="async"
+                referrerpolicy="no-referrer"
+              />
+              <figcaption class="story-img-caption">Nasz chleb na zakwasie · bochenek klasyczny</figcaption>
+            </figure>
+
+            <figure class="story-img-card">
+              <img 
+                src="https://i.ibb.co/8Lg1mvrj/641407422-1363403719147053-3809204027191515677-n.jpg" 
+                alt="Przekrój chleba rzemieślniczego z pięknymi pęcherzami powietrza" 
+                width="400" 
+                height="290" 
+                loading="lazy" 
+                decoding="async"
+                referrerpolicy="no-referrer"
+              />
+              <figcaption class="story-img-caption">Puszysty miękisz i głęboki aromat</figcaption>
+            </figure>
+          </div>
+
+        </div>
+
+        <p class="story-closing">nasz chleb, nasza miłość</p>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         6. MENU SECTION
+         ======================================================================== -->
+    <section class="section-pad menu-section" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        
+        <span class="section-label">KARTA DAŃ</span>
+        <h2 id="menu-title" class="section-title">Menu Bistro Zagajnik</h2>
+        
+        <div class="ornament">
+          <span class="orn-line"></span>
+          <span class="orn-mark"></span>
+          <span class="orn-line"></span>
+        </div>
+
+        <!-- Category quick-nav pills (pure CSS anchor scroll) -->
+        <nav class="menu-nav-bar" aria-label="Szybka nawigacja po kategoriach menu">
+          <a href="#dania-glowne" class="menu-nav-pill">Dania Główne</a>
+          <a href="#zupy" class="menu-nav-pill">Zupy</a>
+          <a href="#pierogi" class="menu-nav-pill">Pierogi u Nas Lepione</a>
+          <a href="#slodkie" class="menu-nav-pill">Słodkie</a>
+          <a href="#dla-dzieci" class="menu-nav-pill">Dla Dzieci</a>
+          <a href="#napoje" class="menu-nav-pill">Ciepłe i Zimne</a>
+          <a href="#specjalne" class="menu-nav-pill">Coś Specjalnego <svg class="lucide-icon" width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true" style="color:var(--warm-gold); vertical-align:-1px; margin-left:3px;"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></a>
+        </nav>
+
+        <div class="menu-categories-stack">
+
+          <!-- 1. Dania Główne -->
+          <article class="menu-card" id="dania-glowne">
+            <header class="menu-card-header">
+              <h3 class="menu-category-title">Dania Główne</h3>
+              <div class="ornament">
+                <span class="orn-line"></span>
+                <span class="orn-mark"></span>
+                <span class="orn-line"></span>
+              </div>
+            </header>
+
+            <ul class="menu-items-list">
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Placki ziemniaczane</span>
+                  <span class="menu-item-desc">sos węgierski / ogórek konserwowy / śmietana</span>
+                </div>
+                <span class="menu-item-price">37 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Placki ziemniaczane</span>
+                  <span class="menu-item-desc">kurczak / surówka z białej kapusty / sos czosnkowy</span>
+                </div>
+                <span class="menu-item-price">36 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Placki ziemniaczane</span>
+                  <span class="menu-item-desc">sos kurkowy</span>
+                </div>
+                <span class="menu-item-price">33 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Burger drobiowy w panko</span>
+                  <span class="menu-item-desc">pomidor / ogórek / frytki z batata / czerwona cebula</span>
+                </div>
+                <span class="menu-item-price">38 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Pyzy z farszem z kaczki pieczonej</span>
+                  <span class="menu-item-desc">okrasa z wędzonego boczku i cebuli</span>
+                </div>
+                <span class="menu-item-price">33 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Sałatka z kurczakiem</span>
+                  <span class="menu-item-desc">boczek / avocado / pieczona papryka / czarne oliwki / czerwona cebula / parmezan / grzanki</span>
+                </div>
+                <span class="menu-item-price">36 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Wątróbka drobiowa z cebulą</span>
+                  <span class="menu-item-desc">chrupkie pieczywo / surówka z ogórka kiszonego</span>
+                </div>
+                <span class="menu-item-price">27 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">De volaille z masłem</span>
+                  <span class="menu-item-desc">puree ziemniaczane / fasolka szparagowa</span>
+                </div>
+                <span class="menu-item-price">35 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Gulasz wołowy</span>
+                  <span class="menu-item-desc">papryka / pieczarka / kopytka</span>
+                </div>
+                <span class="menu-item-price">44 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Zraz wołowy</span>
+                  <span class="menu-item-desc">kluski śląskie / modra kapusta</span>
+                </div>
+                <span class="menu-item-price">46 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Pieczone udko z kaczki</span>
+                  <span class="menu-item-desc">krokiet ziemniaczano-serowy / sos śliwkowy / dziki brokuł</span>
+                </div>
+                <span class="menu-item-price">43 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Sandacz smażony na maśle</span>
+                  <span class="menu-item-desc">sos kurkowy / ziemniaki w mundurkach</span>
+                </div>
+                <span class="menu-item-price">39 zł</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- 2. Zupy -->
+          <article class="menu-card" id="zupy">
+            <header class="menu-card-header">
+              <h3 class="menu-category-title">Zupy</h3>
+              <div class="ornament">
+                <span class="orn-line"></span>
+                <span class="orn-mark"></span>
+                <span class="orn-line"></span>
+              </div>
+            </header>
+
+            <ul class="menu-items-list">
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Strogonoff z kurczakiem</span>
+                  <span class="menu-item-desc">podawany ze świeżym pieczywem</span>
+                </div>
+                <span class="menu-item-price">24 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Krupnik na żołądkach drobiowych</span>
+                  <span class="menu-item-desc">tradycyjny, rozgrzewający</span>
+                </div>
+                <span class="menu-item-price">22 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Zupa z żółtej fasolki szparagowej</span>
+                  <span class="menu-item-desc">z delikatnymi pulpetami drobiowymi</span>
+                </div>
+                <span class="menu-item-price">24 zł</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- 3. Pierogi u Nas Lepione -->
+          <article class="menu-card" id="pierogi">
+            <header class="menu-card-header">
+              <h3 class="menu-category-title">Pierogi u Nas Lepione</h3>
+              <div class="ornament">
+                <span class="orn-line"></span>
+                <span class="orn-mark"></span>
+                <span class="orn-line"></span>
+              </div>
+            </header>
+
+            <ul class="menu-items-list">
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Pierogi ruskie na mące orkiszowej</span>
+                  <span class="menu-item-desc">fasolka szparagowa / panko</span>
+                </div>
+                <span class="menu-item-price">31 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Pieczone pierogi z mięsem wieprzowym</span>
+                  <span class="menu-item-desc">świeży ogórek / chilli / sos czosnkowy</span>
+                </div>
+                <span class="menu-item-price">31 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Pierogi z twarogiem</span>
+                  <span class="menu-item-desc">karmelizowane wiśnie / maślana kruszonka / sos waniliowy</span>
+                </div>
+                <span class="menu-item-price">31 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Pierogi ze szpinakiem</span>
+                  <span class="menu-item-desc">parmezan / sos musztardowo-miodowy</span>
+                </div>
+                <span class="menu-item-price">31 zł</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- 4. Słodkie -->
+          <article class="menu-card" id="slodkie">
+            <header class="menu-card-header">
+              <h3 class="menu-category-title">Słodkie</h3>
+              <div class="ornament">
+                <span class="orn-line"></span>
+                <span class="orn-mark"></span>
+                <span class="orn-line"></span>
+              </div>
+            </header>
+
+            <ul class="menu-items-list">
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Syrniki</span>
+                  <span class="menu-item-desc">sos waniliowy / świeże owoce</span>
+                </div>
+                <span class="menu-item-price">25 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Knedle ze śliwkami</span>
+                  <span class="menu-item-desc">waniliowa śmietana / bułka tarta zrumieniona na maśle</span>
+                </div>
+                <span class="menu-item-price">25 zł</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- 5. Dla Dzieci -->
+          <article class="menu-card" id="dla-dzieci">
+            <header class="menu-card-header">
+              <h3 class="menu-category-title">Dla Dzieci</h3>
+              <div class="ornament">
+                <span class="orn-line"></span>
+                <span class="orn-mark"></span>
+                <span class="orn-line"></span>
+              </div>
+            </header>
+
+            <ul class="menu-items-list">
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Zupa pomidorowa</span>
+                  <span class="menu-item-desc">z delikatnym makaronem</span>
+                </div>
+                <span class="menu-item-price">22 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Panierowana pierś z kurczaka</span>
+                  <span class="menu-item-desc">chrupiąca pierś / złociste frytki</span>
+                </div>
+                <span class="menu-item-price">23 zł</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- 6. Ciepłe i Zimne -->
+          <article class="menu-card" id="napoje">
+            <header class="menu-card-header">
+              <h3 class="menu-category-title">Ciepłe i Zimne</h3>
+              <div class="ornament">
+                <span class="orn-line"></span>
+                <span class="orn-mark"></span>
+                <span class="orn-line"></span>
+              </div>
+            </header>
+
+            <ul class="menu-items-list">
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Herbata klasyczna</span>
+                  <span class="menu-item-desc">czarna, zielona, owocowa, jaśminowa, zielona z mango, mięta, rumianek</span>
+                </div>
+                <span class="menu-item-price">12 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Napar imbirowy</span>
+                  <span class="menu-item-desc">świeży imbir, miód, cytryna</span>
+                </div>
+                <span class="menu-item-price">17 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Herbaty sypane</span>
+                  <span class="menu-item-desc">autorskie kompozycje liściaste</span>
+                  <span class="menu-sub-details">Wybór: Earl Grey Lemon · Tropikalna Wyspa · Szeherezada · Przebudzenie Mocy</span>
+                </div>
+                <span class="menu-item-price">14 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Espresso</span>
+                  <span class="menu-item-desc">klasyczne, intensywne</span>
+                </div>
+                <span class="menu-item-price">8 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Espresso Doppio</span>
+                  <span class="menu-item-desc">podwójna porcja espresso</span>
+                </div>
+                <span class="menu-item-price">10 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Americano</span>
+                  <span class="menu-item-desc">delikatna kawa czarna</span>
+                </div>
+                <span class="menu-item-price">10 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Cappuccino</span>
+                  <span class="menu-item-desc">z puszystą pianką mleczną</span>
+                </div>
+                <span class="menu-item-price">12 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Flat White</span>
+                  <span class="menu-item-desc">podwójne espresso z gładkim mlekiem</span>
+                </div>
+                <span class="menu-item-price">12 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Latte klasyczne</span>
+                  <span class="menu-item-desc">aksamitne mleczne espresso (klasyczne / duże)</span>
+                </div>
+                <span class="menu-item-price">15 zł / 16 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Latte smakowe</span>
+                  <span class="menu-item-desc">waniliowe, orzechowe, kokosowe lub karmelowe</span>
+                </div>
+                <span class="menu-item-price">16 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Mleko roślinne lub bez laktozy</span>
+                  <span class="menu-item-desc">dopłata do dowolnej kawy</span>
+                </div>
+                <span class="menu-item-price">+2 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Lemoniada rzemieślnicza</span>
+                  <span class="menu-item-desc">ogórkowa (14 zł) · cytrynowa (14 zł) · lemoniada dnia (15 zł)</span>
+                </div>
+                <span class="menu-item-price">14 zł / 15 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Kompot domowy</span>
+                  <span class="menu-item-desc">gotowany na świeżych owocach</span>
+                </div>
+                <span class="menu-item-price">9 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Sok Cappy</span>
+                  <span class="menu-item-desc">pomarańczowy, jabłkowy, grejpfrut</span>
+                </div>
+                <span class="menu-item-price">9 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Woda mineralna / Fuze Tea</span>
+                  <span class="menu-item-desc">woda niegazowana lub gazowana (8 zł) / Fuze Tea (10 zł)</span>
+                </div>
+                <span class="menu-item-price">8 zł / 10 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Napoje gazowane (250ml)</span>
+                  <span class="menu-item-desc">Coca-Cola, Coca-Cola Zero, Sprite, Fanta, Kinley Tonic</span>
+                </div>
+                <span class="menu-item-price">10 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Świeżo wyciskane soki</span>
+                  <span class="menu-item-desc">jabłkowy (15 zł) · marchwiowy (15 zł) · pomarańczowy (17 zł) · mix (18 zł)</span>
+                </div>
+                <span class="menu-item-price">15 – 18 zł</span>
+              </li>
+            </ul>
+          </article>
+
+          <!-- 7. Coś Specjalnego -->
+          <article class="menu-card" id="specjalne">
+            <header class="menu-card-header">
+              <h3 class="menu-category-title">Coś Specjalnego <svg class="lucide-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true" style="color:var(--warm-gold); vertical-align:-2px; margin-left:4px;"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></h3>
+              <div class="ornament">
+                <span class="orn-line"></span>
+                <span class="orn-mark"></span>
+                <span class="orn-line"></span>
+              </div>
+            </header>
+
+            <ul class="menu-items-list">
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Kakao z piankami</span>
+                  <span class="menu-item-desc">gęste, kremowe kakao z miękkimi piankami marshmallow</span>
+                </div>
+                <span class="menu-item-price">15 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Frappe</span>
+                  <span class="menu-item-desc">chłodzące, spienione espresso na lodzie</span>
+                </div>
+                <span class="menu-item-price">15 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Frappe z mlekiem skondensowanym</span>
+                  <span class="menu-item-desc">słodkie, aksamitne orzeźwienie kawowe</span>
+                </div>
+                <span class="menu-item-price">15 zł</span>
+              </li>
+
+              <li class="menu-item-row">
+                <div class="menu-item-info">
+                  <span class="menu-item-name">Gorąca czekolada z bitą śmietaną</span>
+                  <span class="menu-item-desc">prawdziwa gęsta czekolada deserowa z puszystą bitą śmietaną</span>
+                </div>
+                <span class="menu-item-price">16 zł</span>
+              </li>
+            </ul>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         7. GODZINY SECTION
+         ======================================================================== -->
+    <section class="section-pad hours-section" id="godziny" aria-labelledby="hours-title">
+      <div class="container">
+        
+        <span class="section-label">CZAS DLA CIEBIE</span>
+        <div class="ornament ornament-light">
+          <span class="orn-line"></span>
+          <span class="orn-mark">🌿</span>
+          <span class="orn-line"></span>
+        </div>
+        
+        <h2 id="hours-title" class="section-title-script">Kiedy nas znajdziesz</h2>
+
+        <div class="hours-card">
+          <table class="hours-table" aria-label="Godziny otwarcia Bistro Zagajnik">
+            <tbody>
+              <tr>
+                <td class="hours-day">Poniedziałek</td>
+                <td class="hours-time">08:00 – 18:00</td>
+              </tr>
+              <tr>
+                <td class="hours-day">Wtorek</td>
+                <td class="hours-time">08:00 – 18:00</td>
+              </tr>
+              <tr>
+                <td class="hours-day">Środa</td>
+                <td class="hours-time">08:00 – 18:00</td>
+              </tr>
+              <tr>
+                <td class="hours-day">Czwartek</td>
+                <td class="hours-time">08:00 – 18:00</td>
+              </tr>
+              <tr>
+                <td class="hours-day">Piątek</td>
+                <td class="hours-time">08:00 – 18:00</td>
+              </tr>
+              <tr>
+                <td class="hours-day">Sobota</td>
+                <td class="hours-time">08:00 – 16:00</td>
+              </tr>
+              <tr>
+                <td class="hours-day">Niedziela</td>
+                <td class="hours-time">09:00 – 17:00</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="hours-notice">
+            <svg class="lucide-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--warm-gold); vertical-align:-2px; margin-right:4px;"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            Świeży chleb wypiekany od rana · Obiady domowe serwowane od 12:00
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         8. OPINIE SECTION
+         ======================================================================== -->
+    <section class="section-pad reviews-section" id="opinie" aria-labelledby="reviews-title">
+      <div class="container">
+        
+        <span class="section-label">OPINIE NASZYCH GOŚCI</span>
+        <h2 id="reviews-title" class="section-title">Co mówią nasi Goście</h2>
+        
+        <div class="ornament">
+          <span class="orn-line"></span>
+          <span class="orn-mark"></span>
+          <span class="orn-line"></span>
+        </div>
+
+        <div class="reviews-grid">
+          
+          <!-- Review 1 -->
+          <article class="review-card">
+            <span class="review-quote-mark" aria-hidden="true">“</span>
+            <div class="review-stars" aria-label="Ocena: 5 na 5 gwiazdek">
+              <svg class="lucide-icon star-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="lucide-icon star-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="lucide-icon star-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="lucide-icon star-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="lucide-icon star-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="review-text">
+              „Bardzo miło, szybko, smacznie. Jestem klientem nie pierwszy raz i za każdym razem zaskoczona wychodzę nowym smakiem — na pewno wrócę po więcej. Polecam.”
+            </p>
+            <footer class="review-author">Klient Bistro Zagajnik</footer>
+          </article>
+
+          <!-- Review 2 -->
+          <article class="review-card">
+            <span class="review-quote-mark" aria-hidden="true">“</span>
+            <div class="review-stars" aria-label="Ocena: 5 na 5 gwiazdek">
+              <svg class="lucide-icon star-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="lucide-icon star-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="lucide-icon star-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="lucide-icon star-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="lucide-icon star-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="review-text">
+              „Przepiękne miejsce, w którym czuć wszystko co najlepsze. Bułeczki słodkie najlepsze w całym mieście, a nawet w całym województwie. Polecam.”
+            </p>
+            <footer class="review-author">Opinia Facebook</footer>
+          </article>
+
+          <!-- Review 3 -->
+          <article class="review-card">
+            <span class="review-quote-mark" aria-hidden="true">“</span>
+            <div class="review-stars" aria-label="Ocena: 5 na 5 gwiazdek">
+              <svg class="lucide-icon star-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="lucide-icon star-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="lucide-icon star-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="lucide-icon star-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg class="lucide-icon star-icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <p class="review-text">
+              „Bardzo dobre jedzenie, fajny wystrój, miła obsługa, polecam!”
+            </p>
+            <footer class="review-author">Gość Bistro</footer>
+          </article>
+
+        </div>
+
+        <div class="reviews-footer-cta">
+          <a 
+            href="https://www.facebook.com/ZagajnikRadomsko/reviews/?id=100064323123134&sk=reviews" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-reviews-fb"
+          >
+            Więcej opinii na Facebooku →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         9. KONTAKT SECTION
+         ======================================================================== -->
+    <section class="section-pad contact-section" id="kontakt" aria-labelledby="contact-title">
+      <div class="container">
+        
+        <span class="section-label">ODWIEDŹ NAS W RADOMSKU</span>
+        <div class="ornament">
+          <span class="orn-line"></span>
+          <span class="orn-mark"></span>
+          <span class="orn-line"></span>
+        </div>
+        
+        <h2 id="contact-title" class="section-title-script">Zapraszamy do Zagajnika</h2>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Rows -->
+          <div class="contact-details-box">
+            
+            <div class="contact-row">
+              <span class="contact-icon" aria-hidden="true">
+                <svg class="lucide-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <div>
+                <p class="contact-info-title">Telefon do zamówień i rezerwacji</p>
+                <a href="tel:537653002" class="contact-info-val phone-val">537 653 002</a>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <span class="contact-icon" aria-hidden="true">
+                <svg class="lucide-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <div>
+                <p class="contact-info-title">Adres bistra</p>
+                <p class="contact-info-val">ul. Władysława Reymonta 20<br>97-500 Radomsko</p>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <span class="contact-icon" aria-hidden="true">
+                <svg class="lucide-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </span>
+              <div>
+                <p class="contact-info-title">Adres poczty e-mail</p>
+                <a href="mailto:manager.restauracjalas@gmail.com" class="contact-info-val">manager.restauracjalas@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-row">
+              <span class="contact-icon" aria-hidden="true">
+                <svg class="lucide-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              </span>
+              <div>
+                <p class="contact-info-title">Facebook</p>
+                <a href="https://www.facebook.com/ZagajnikRadomsko" target="_blank" rel="noopener noreferrer" class="contact-info-val">
+                  facebook.com/ZagajnikRadomsko
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-cta-wrapper">
+              <a href="tel:537653002" class="contact-btn-tel">
+                Zadzwoń: 537 653 002
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Google Maps Embed -->
+          <div class="map-frame-wrapper" aria-label="Mapa z lokalizacją Bistro Zagajnik">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240.94061954808538!2d19.44031711321541!3d51.068337690977046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471755f38af20713%3A0x461effee8e6a5804!2sZagajnik!5e1!3m2!1spl!2spl!4v1791357450531!5m2!1spl!2spl" 
+              width="100%" 
+              height="400" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="Lokalizacja Bistro Zagajnik na Google Maps"
+            ></iframe>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       10. FOOTER
+       ======================================================================== -->
+  <footer class="main-footer">
+    <div class="container footer-content">
+      
+      <img 
+        src="https://i.ibb.co/WWLgfDp9/295062660-420312263456208-6887795424288119286-n.jpg" 
+        alt="Bistro Zagajnik" 
+        class="footer-logo-img" 
+        width="44" 
+        height="44" 
+        loading="lazy"
+        decoding="async"
+        referrerpolicy="no-referrer"
+      />
+
+      <span class="footer-brand-sub">Bistro</span>
+      <p class="footer-brand-name">Zagajnik</p>
+
+      <div class="footer-links-row" aria-label="Linki w stopce">
+        <a href="#o-nas">O Nas</a>
+        <span aria-hidden="true">·</span>
+        <a href="#menu">Karta Dań</a>
+        <span aria-hidden="true">·</span>
+        <a href="#chleb">Historia Chleba</a>
+        <span aria-hidden="true">·</span>
+        <a href="#godziny">Godziny Otwarcia</a>
+        <span aria-hidden="true">·</span>
+        <a href="#opinie">Opinie Gości</a>
+        <span aria-hidden="true">·</span>
+        <a href="#kontakt">Kontakt i Mapa</a>
+      </div>
+
+      <div class="footer-meta-row">
+        <span>
+          <svg class="lucide-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:4px; vertical-align:-1px; color:var(--warm-gold);"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+          ul. Władysława Reymonta 20, 97-500 Radomsko
+        </span>
+        <span aria-hidden="true">·</span>
+        <span>
+          <svg class="lucide-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:4px; vertical-align:-1px; color:var(--warm-gold);"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:537653002">537 653 002</a>
+        </span>
+        <span aria-hidden="true">·</span>
+        <span>
+          <svg class="lucide-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right:4px; vertical-align:-1px; color:var(--warm-gold);"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <a href="mailto:manager.restauracjalas@gmail.com">manager.restauracjalas@gmail.com</a>
+        </span>
+      </div>
+
+      <p class="footer-copyright">
+        © 2026 Bistro Zagajnik Radomsko. Wszelkie prawa zastrzeżone · Ciepło, pasja i domowa kuchnia każdego dnia.
+      </p>
+
+    </div>
+  </footer>
+
+</body>
+</html>
